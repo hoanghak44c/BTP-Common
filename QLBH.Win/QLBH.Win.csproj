@@ -1,0 +1,346 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24595F7F-5145-4E0B-85EB-43306313EEBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBanHang</RootNamespace>
+    <AssemblyName>QLBanHang</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>artmoney.ico</ApplicationIcon>
+    <StartupObject>QLBanHang.Program</StartupObject>
+    <ManifestCertificateThumbprint>7594B1A05527A26AEDD64E6C5781ADB2C2DC26F0</ManifestCertificateThumbprint>
+    <ManifestKeyFile>QLBanHang_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>D:\Projects\QLBanHang\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\SaleTid\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\SaleTid\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.BanHang, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.BaoHanh, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\BaoHanh\QLBanHang.Modules.BaoHanh.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.CSKH, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\CSKH\QLBanHang.Modules.CSKH.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.DanhMuc, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.DongBoERP, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\DongBoERP\QLBanHang.Modules.DongBoERP.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.HeThong, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\HeThong\QLBanHang.Modules.HeThong.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.KhoHang, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\KhoHang\QLBanHang.Modules.KhoHang.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.TheThanhVien, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\TranAnh\TheThanhVien\QLBanHang.Modules.TheThanhVien.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBH.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\QLBH.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBH.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\QLBH.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modules\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmSelectDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmSelectDatabase.Designer.cs">
+      <DependentUpon>frmSelectDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLBanHangInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QLBanHangInstaller.Designer.cs">
+      <DependentUpon>QLBanHangInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Modules\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmSelectDatabase.resx">
+      <DependentUpon>frmSelectDatabase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\PhieuChi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\PhieuThu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="artmoney.ico" />
+    <Content Include="artmoney1.ico" />
+    <Content Include="Images\02.png" />
+    <Content Include="Images\125_30.ico" />
+    <Content Include="Images\125_31.ico" />
+    <Content Include="Images\1_94.ico" />
+    <Content Include="Images\1_95.ico" />
+    <Content Include="Images\21.png" />
+    <Content Include="Images\240.ico" />
+    <Content Include="Images\32px-Crystal_Clear_action_button_cancel.png" />
+    <Content Include="Images\32px-Crystal_Clear_filesystem_folder_print.png" />
+    <Content Include="Images\about.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\anh nen1.jpg" />
+    <Content Include="Images\applications.png" />
+    <Content Include="Images\apply.png" />
+    <Content Include="Images\artmoney.ico" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\btnDong.Image.png" />
+    <Content Include="Images\btnXoa.Image.png" />
+    <Content Include="Images\ChangePass.ico" />
+    <Content Include="Images\close.ico" />
+    <Content Include="Images\configure.png" />
+    <Content Include="Images\Customer.png" />
+    <Content Include="Images\del.png" />
+    <Content Include="Images\delete.ico" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\delete1.ICO" />
+    <Content Include="Images\DieuChuyen.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\exit.png" />
+    <Content Include="Images\export.png" />
+    <Content Include="Images\file_find.png" />
+    <Content Include="Images\HDBan.ico" />
+    <Content Include="Images\HDMua.png" />
+    <Content Include="Images\help.ico" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\icoKey.ICO" />
+    <Content Include="Images\icoLuanAn.ico" />
+    <Content Include="Images\icoUserLogin.gif" />
+    <Content Include="Images\import.png" />
+    <Content Include="Images\info2.png" />
+    <Content Include="Images\keys.ico" />
+    <Content Include="Images\LoaiThuoc1.jpg" />
+    <Content Include="Images\Logout.gif" />
+    <Content Include="Images\mnuIOBillInAdd.Image.png" />
+    <Content Include="Images\mnuIOTransferAdd.Image.png" />
+    <Content Include="Images\money.png" />
+    <Content Include="Images\move.png" />
+    <Content Include="Images\Mutation.gif" />
+    <Content Include="Images\new.ico" />
+    <Content Include="Images\new.png" />
+    <Content Include="Images\NhaCungCap.png" />
+    <Content Include="Images\NhanVien.png" />
+    <Content Include="Images\NhaSanXuat.png" />
+    <Content Include="Images\PEOPLE.ICO" />
+    <Content Include="Images\PhieuChi_.png" />
+    <Content Include="Images\PhieuDieuChuuyen.png" />
+    <Content Include="Images\PhieuThu_.png" />
+    <Content Include="Images\print.ico" />
+    <Content Include="Images\print.png" />
+    <Content Include="Images\project.ico" />
+    <Content Include="Images\QLBH.ico" />
+    <Content Include="Images\QuocGia.png" />
+    <Content Include="Images\refresh.ico" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\save.ico" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\Thuoc.jpg" />
+    <Content Include="Images\UserGroup.ico" />
+    <Content Include="Images\user_group.png" />
+    <Content Include="Images\user_group1.png" />
+    <Content Include="Images\web.png" />
+    <Content Include="Images\zoom_out.png" />
+    <Content Include="Temp\DocSo.dll" />
+    <Content Include="Temp\GvS.Controls.HtmlTextbox.dll" />
+    <Content Include="Temp\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="Temp\Microsoft.Vbe.Interop.dll" />
+    <Content Include="Temp\TBarCode5.ocx" />
+    <Content Include="Web References\WebReference\main.disco" />
+    <None Include="app.config" />
+    <None Include="Help\HDSD_QLBH.chm" />
+    <None Include="Resources\32px-Crystal_Clear_action_button_cancel.png" />
+    <None Include="Temp\BangGia634101364484628370.xls" />
+    <None Include="Temp\BangGia634101376998134101.xls" />
+    <None Include="Temp\MauBangGia.xls" />
+    <None Include="Temp\TBarCode5.oca" />
+    <None Include="Web References\WebReference\main.wsdl" />
+    <None Include="Web References\WebReference\Reference.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" -n --newline-flush
+mkdir "$(TargetDir)Help"
+copy "$(ProjectDir)Help\HDSD_QLBH.chm" "$(TargetDir)\Help"
+mkdir "$(TargetDir)Temp"
+copy "$(ProjectDir)Temp\*.*" "$(TargetDir)\Temp"
+mkdir "$(TargetDir)Images"
+copy "$(ProjectDir)Images\bg.jpg" "$(TargetDir)\Images"
+rem copy /Y "$(ProjectDir)..\QLBH.Core\bin\$(ConfigurationName)\QLBH.Core.pdb" "$(ProjectDir)..\QLBH.Documents\References\QLBH.Core.pdb"
+rem copy "$(ProjectDir)Modules\BanHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BanHang.dll" "..\..\..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll"
+rem copy "$(ProjectDir)Modules\BaoHanh\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BaoHanh.dll" "..\..\..\QLBH.Documents\References\TranAnh\BaoHanh\QLBanHang.Modules.BaoHanh.dll"
+rem copy "$(ProjectDir)Modules\CSKH\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.CSKH.dll" "..\..\..\QLBH.Documents\References\TranAnh\CSKH\QLBanHang.Modules.CSKH.dll"
+rem copy "$(ProjectDir)Modules\DanhMuc\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DanhMuc.dll" "..\..\..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll"
+rem copy "$(ProjectDir)Modules\DongBoERP\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DongBoERP.dll" "..\..\..\QLBH.Documents\References\TranAnh\DongBoERP\QLBanHang.Modules.DongBoERP.dll"
+rem copy "$(ProjectDir)Modules\DongBoERP\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DongBoERP.pdb" "..\..\..\QLBH.Documents\References\TranAnh\DongBoERP\QLBanHang.Modules.DongBoERP.pdb"
+rem copy "$(ProjectDir)Modules\HeThong\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.HeThong.dll" "..\..\..\QLBH.Documents\References\TranAnh\HeThong\QLBanHang.Modules.HeThong.dll"
+rem copy "$(ProjectDir)Modules\KhoHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.KhoHang.dll" "..\..\..\QLBH.Documents\References\TranAnh\KhoHang\QLBanHang.Modules.KhoHang.dll"
+rem copy "$(ProjectDir)Modules\KhoHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.KhoHang.pdb" "..\..\..\QLBH.Documents\References\TranAnh\KhoHang\QLBanHang.Modules.KhoHang.pdb"
+rem copy "$(ProjectDir)Modules\DanhMuc\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DanhMuc.pdb" "..\..\..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.pdb"
+rem copy "$(ProjectDir)Modules\BanHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BanHang.pdb" "..\..\..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.pdb"
+rem copy "$(ProjectDir)Modules\HeThong\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.HeThong.pdb" "..\..\..\QLBH.Documents\References\TranAnh\HeThong\QLBanHang.Modules.HeThong.pdb"
+
+rem if /I "$(ConfigurationName)" == "Release" if exist $(TargetDir)Test.bat $(TargetDir)Test.bat
+
+if /I "$(ConfigurationName)" == "Release" if exist $(TargetDir)deploy.bat $(TargetDir)deploy.bat $(TargetDir)</PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
