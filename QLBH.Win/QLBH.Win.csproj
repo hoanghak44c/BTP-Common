@@ -78,6 +78,10 @@
     <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="QLBanHang.Modules.BanHang, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll</HintPath>
