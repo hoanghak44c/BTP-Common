@@ -43,8 +43,7 @@ namespace QLBH.Common.DAO
         {
             try
             {
-                ExecuteCommand("SP_GETMAXAPPS");
-                int maxApps = Common.IntValue(Parameters["p_MaxApps"].Value.ToString());
+                int maxApps = GetObjectCommand<int>("SP_GETMAXAPPS");
                 return maxApps == 0 ? 3 : maxApps;
             }
             catch (Exception)
@@ -155,9 +154,7 @@ namespace QLBH.Common.DAO
         {
             try
             {
-                ExecuteCommand("sp_NhatKy_NguoiDung_Insert2", 0, idNhanVien, idNguoiDung, tenMay, terminal, chucNang, tenDangNhap, processId);
-
-                return Convert.ToInt32(Parameters["p_IdNhatKy"].Value.ToString());
+                return GetObjectCommand<int>("sp_NhatKy_NguoiDung_Insert2", idNhanVien, idNguoiDung, tenMay, terminal, chucNang, tenDangNhap, processId);
             }
             catch (Exception ex)
             {

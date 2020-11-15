@@ -3402,7 +3402,8 @@ namespace QLBH.Common
             }
             catch (Exception ex)
             {
-                File.AppendAllText(Application.StartupPath + "\\QLBH_Log.txt", "Description: " + ex.ToString());
+                WriteLog(ex.ToString());
+                //File.AppendAllText(Application.StartupPath + "\\QLBH_Log.txt", "Description: " + ex.ToString());
             }
 
         }
@@ -3456,7 +3457,8 @@ namespace QLBH.Common
             }
             catch (Exception ex)
             {
-                File.AppendAllText(Application.StartupPath + "\\QLBH_Log.txt", "Description: " + ex.ToString());
+                WriteLog(ex.ToString());
+                //File.AppendAllText(Application.StartupPath + "\\QLBH_Log.txt", "Description: " + ex.ToString());
             }
         }
         public static void SelectAllText(object sender)

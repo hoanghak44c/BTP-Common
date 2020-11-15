@@ -1,0 +1,24 @@
+1877452274$$$select version from TBL_THAMSO_CHUNG where type = @pType
+-199273283$$$select sysdate()
+833204623$$$delete from t using TBL_CLIENTS as t where (1=1 or t.processid=@surfixProcess) and not exists (SELECT processlist_id FROM performance_schema.session_account_connect_attrs WHERE attr_name = 'program_name' AND attr_value = @program AND processlist_id IN (SELECT processlist_id FROM performance_schema.session_account_connect_attrs WHERE  attr_name = '_pid' AND attr_value = t.processid)) and t.program = @program
+1942228428$$$delete from t using TBL_CLIENTS as t where processid not in (@processIds) and computername = @computername and macaddress = @macaddress and ipaddress = @ipaddress and program = @program
+2075636797$$$UPDATE TBL_CLIENTS set computername = @computername, ipaddress = @ipaddress, logon = localtimestamp(), version = @version, username = @username where processid = @processid and macaddress = @macaddress and program = @program
+-1619718288$$$INSERT INTO TBL_CLIENTS (computername, ipaddress, macaddress, logon, version, username, processid, program) VALUES (@computername, @ipaddress, @macaddress, localtimestamp(), @version, @username, @processid, @program)
+-2098877371$$$select cl.macaddress from (select attr_value from performance_schema.session_account_connect_attrs where attr_name = '_pid') v inner join TBL_CLIENTS cl on v.attr_value = cl.processid where cl.program = @program and cl.computername = @computername
+-1942693071$$$select cl.computername from (select attr_value from performance_schema.session_account_connect_attrs where attr_name = '_pid') v inner join TBL_CLIENTS cl on v.attr_value = cl.processid and (1=1 or cl.processid like cl.processid || @surfixedProcess) where cl.program = @program and cl.username = @username and cl.computername not like @syncWebServer
+428675847$$$SELECT lk.IdUser,nd.TenDangNhap,lk.Computer, lk.ProcessId FROM TBL_FUNCTION_LOCKING lk INNER JOIN TBL_DM_NGUOIDUNG nd ON lk.IdUser = nd.IdNguoidung WHERE lk.Computer=@computer
+-428471401$$$delete from TBL_NHATKY_NGUOIDUNG where tendangnhap = @tendangnhap and thoigian_in < str_to_date(@currentDate, '%d/%M/%Y') - 30
+771281998$$$delete from t using TBL_CLIENTS as t where t.macaddress = @macaddress and t.computername = @computername and t.ipaddress = @ipaddress and t.processid = @processid
+-1464647978$$$UPDATE TBL_CG SET cref=0 WHERE cdep LIKE '%,' + @cdep + ',%'
+-317554176$$$SELECT cref FROM TBL_CG WHERE cname=@cname AND identifier=@identifier
+-2010237256$$$INSERT INTO TBL_CG(cdep,cname,identifier,cref,ccre) VALUES(@cdep,@cname,@identifier,1,SYSDATE())
+2045859809$$$SELECT t1.idnhanvien, t1.manhanvien, t1.hoten, t1.ngaysinh, t1.gioitinh, t1.idphongban, t1.idtrungtamhachtoan, t1.idchucvu, t1.diachi, t1.dienthoai, t1.sudung, t1.email, t1.ghichu, t2.tenphongban, t3.tenchucvu, t1.idquanlytructiep, t4.hoten QuanLyTrucTiep FROM TBL_DM_NHANVIEN t1 left join TBL_DM_PHONGBAN t2 on t1.idphongban = t2.idphongban LEFT JOIN TBL_DM_NHANVIEN t4 ON t1.idquanlytructiep = t4.idnhanvien left join TBL_DM_CHUCVU t3 on t1.idchucvu = t3.idchucvu
+321579149$$$SELECT t1.idnhanvien, t1.manhanvien, t1.hoten, t1.ngaysinh, t1.gioitinh, t1.idphongban, t1.idtrungtamhachtoan, t1.idchucvu, t1.diachi, t1.dienthoai, t1.sudung, t1.email, t1.ghichu, t2.tenphongban, t3.tenchucvu, t1.idquanlytructiep, t4.hoten QuanLyTrucTiep FROM TBL_DM_NHANVIEN t1 left join TBL_DM_PHONGBAN t2 on t1.idphongban = t2.idphongban LEFT JOIN TBL_DM_NHANVIEN t4 ON t1.idquanlytructiep = t4.idnhanvien left join TBL_DM_CHUCVU t3 on t1.idchucvu = t3.idchucvu where t1.sudung = 1
+466830719$$$SELECT lk.IdUser,nd.TenDangNhap,lk.Computer, lk.ProcessId FROM TBL_FUNCTION_LOCKING lk INNER JOIN TBL_DM_NGUOIDUNG nd ON lk.IdUser = nd.IdNguoidung WHERE lk.Computer=@computer
+-329490141$$$SELECT t1.iddoituong, t1.idcha, t1.madoituong, t1.tendoituong, t1.nguoilienlac, t1.diachi, t1.dienthoai, t1.fax, t1.email, t1.masothue, t1.type, t1.sudung, t1.ghichu, t1.gioitinh, t1.ngaysinh, t1.idordertype, t1.billto, t1.shipto FROM TBL_DM_DOITUONG t1 where t1.marieng is null
+-8840616$$$SELECT t1.idloaisp, t1.maloaisp, t1.tenloaisp, t1.sudung FROM TBL_DM_LOAISANPHAM t1 WHERE t1.sudung = 1
+-334106629$$$SELECT t1.ma, t1.ten FROM TBL_DM_DL_HANG t1
+1563925073$$$SELECT t1.ma, t1.ten, t1.nganh as macha, last_update_date FROM TBL_DM_DL_LOAI t1
+1113900083$$$SELECT t1.ma, t1.ten, t1.loai as macha, last_update_date FROM TBL_DM_DL_CHUNG t1
+-1349373834$$$SELECT t1.ma, t1.ten, t1.chung as macha, last_update_date FROM TBL_DM_DL_NHOM t1
+-416309524$$$SELECT t1.ma, t1.ten, t1.nhom as macha, last_update_date FROM TBL_DM_DL_MODEL t1

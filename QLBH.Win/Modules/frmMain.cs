@@ -1704,13 +1704,16 @@ namespace QLBanHang.Modules
             {
                 verTimerTickCompleted = true;
 
-                string localLogFile = Application.StartupPath + "\\QLBH_Log.txt";
-                if (File.Exists(localLogFile))
-                {
-                    string logContent = File.ReadAllText(localLogFile);
-                    EventLogProvider.Instance.WriteLog(logContent, "local logs");
-                    File.Delete(localLogFile);
-                }
+                EventLogProvider.Instance.WriteLog(ex.ToString(), String.Empty);
+
+                //string localLogFile = Application.StartupPath + "\\QLBH_Log.txt";
+                //if (File.Exists(localLogFile))
+                //{
+                //    string logContent = File.ReadAllText(localLogFile);
+                //    EventLogProvider.Instance.WriteLog(logContent, "local logs");
+                //    File.Delete(localLogFile);
+                //}
+                
                 //MessageBox.Show("Cập nhật phiên bản mới không thành công");
             }
         }

@@ -141,7 +141,7 @@ namespace QLBH.Common
             //SqlConnection SqlConn = Connection.Instance.GetSqlConnection();
             //using (SqlConnection SqlConn = Connection.Instance.GetSqlConnection())
             //{
-            GtidDataAdapter adap = new GtidDataAdapter(strsql, ConnectionUtil.Instance.GetConnection());
+            GtidDataAdapter adap = new GtidDataAdapter(strsql.ToUpper(), ConnectionUtil.Instance.GetConnection());
             DataSet ds;
             ds = new DataSet();
             try {
